@@ -13,4 +13,6 @@ In relation to the previously defined categorical variables. Certain input and o
 
 ## Test different hypothesis and neural networks architectures
 (This was realized and documented on `neural_network_test.ipynb` file)<br>
-Note: To keep an organized code the definition of the Neural Network models and its variations were coded in `neural_network.py`
+Note: To keep an organized code the definition of the Neural Network models and its variations were in `neural_network.py` file.
+
+## 
