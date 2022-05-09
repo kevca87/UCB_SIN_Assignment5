@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+#This is the base class
 class NeuralNetwork(tf.keras.Model):
   def __init__(self,inputs_n):
     super(NeuralNetwork, self).__init__()
@@ -15,6 +16,7 @@ class NeuralNetwork(tf.keras.Model):
     y_prime = self.sequence(x)
     return y_prime
 
+#This class is implemented when we want to work with one activation function
 class NeuralNetworkOneActFn(NeuralNetwork):
 
   def __init__(self,inputs_n,hidden_layers_sizes,activation_fn):
@@ -27,6 +29,7 @@ class NeuralNetworkOneActFn(NeuralNetwork):
     y_prime = self.sequence(x)
     return y_prime
 
+#This class supports two activation functions
 class NeuralNetworkTwoActFn(NeuralNetwork):
 
   def __init__(self,inputs_n,hidden_layers_sizes,activation_fn,sec_act_fn):
@@ -40,7 +43,7 @@ class NeuralNetworkTwoActFn(NeuralNetwork):
     y_prime = self.sequence(x)
     return y_prime
 
-
+#This class implements the dropout layer between the hidden layers 
 class NeuralNetworkDropout(NeuralNetwork):
 
   def __init__(self,inputs_n,hidden_layers_sizes,activation_fn,dropout_rate=0.5):
